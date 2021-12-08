@@ -83,6 +83,7 @@ if __name__ == '__main__':
                     print(f'The command is: {command}')
                     result = movebase_client(4.3,0.3,-0.69,0.725)
                     if result:
+                        print("Goal reached!!!")
                         head.publish(0)
                         rospy.sleep(0.5)
                         cam.publish(0)
@@ -135,6 +136,7 @@ if __name__ == '__main__':
                     print(f'The command is: {command}')
                     result = movebase_client(6,0.6,0,1)
                     if result:
+                        print("Goal reached!!!")
                         head.publish(0.5)
                         rospy.sleep(0.5)
                         cam.publish(-0.224)
@@ -187,6 +189,7 @@ if __name__ == '__main__':
                     print(f'The command is: {command}')
                     result = movebase_client(5.3,4.5,0,1)
                     if result:
+                        print("Goal reached!!!")
                         head.publish(0)
                         rospy.sleep(0.5)
                         cam.publish(0)
@@ -239,6 +242,7 @@ if __name__ == '__main__':
                     print(f'The command is: {command}')
                     result = movebase_client(1.7,3.6,-1,0)
                     if result:
+                        print("Goal reached!!!")
                         head.publish(1.047)
                         rospy.sleep(0.5)
                         cam.publish(0)
@@ -290,6 +294,7 @@ if __name__ == '__main__':
                     print(f'The command is: {command}')
                     result = movebase_client(4.3,0.3,-0.69,0.725)
                     if result:
+                        print("Goal 1 reached!!!")
                         head.publish(0)
                         rospy.sleep(0.5)
                         cam.publish(0)
@@ -340,6 +345,7 @@ if __name__ == '__main__':
 
                     result = movebase_client(6,0.6,0,1)
                     if result:
+                        print("Goal 2 reached!!!")
                         head.publish(0.5)
                         rospy.sleep(0.5)
                         cam.publish(-0.224)
@@ -390,6 +396,7 @@ if __name__ == '__main__':
 
                     result = movebase_client(5.3,4.5,0,1)
                     if result:
+                        print("Goal 3 reached!!!")
                         head.publish(0)
                         rospy.sleep(0.5)
                         cam.publish(0)
@@ -440,6 +447,7 @@ if __name__ == '__main__':
 
                     result = movebase_client(1.7,3.6,-1,0)
                     if result:
+                        print("Goal 4 reached!!!")
                         head.publish(1.047)
                         rospy.sleep(0.5)
                         cam.publish(0)
@@ -489,7 +497,7 @@ if __name__ == '__main__':
 
                 result = movebase_client(0.5,0,0,1)
                 if result:
-                    rospy.loginfo("Execution done!")
+                    print("Execution done!")
                     rospy.sleep(5)
             except:
                 print("Sorry, Please say the command again")
