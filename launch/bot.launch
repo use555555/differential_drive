@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find differential_drive)/launch/gazebo.launch" />
+    <include file="$(find differential_drive)/launch/spawn.launch" />
+    <include file="$(find differential_drive)/launch/rviz.launch" />
+    <node pkg="differential_drive" name="publish" type="publish.py" output="screen"> 
+    </node>
+
+</launch>

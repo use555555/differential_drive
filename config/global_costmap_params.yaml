@@ -1,0 +1,6 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_link
+  update_frequency: 2.5
+  inflation_radius: 0.325
+  static_map: true

@@ -1,0 +1,41 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"bwheel_attach" [label="bwheel_attach"];
+"bwheel" [label="bwheel"];
+"body" [label="body"];
+"head" [label="head"];
+"camera" [label="camera"];
+"lens" [label="lens"];
+"fwheel_attach" [label="fwheel_attach"];
+"fwheel" [label="fwheel"];
+"lwheel" [label="lwheel"];
+"lwheel_box" [label="lwheel_box"];
+"rwheel" [label="rwheel"];
+"rwheel_box" [label="rwheel_box"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "base_to_battach" [label="xyz: -0.225 0 0.1 \nrpy: 0 -0 0"]
+"base_to_battach" -> "bwheel_attach"
+"bwheel_attach" -> "bwheel_attach_to_bwheel" [label="xyz: 0 0 -0.075 \nrpy: 0 -0 0"]
+"bwheel_attach_to_bwheel" -> "bwheel"
+"base_link" -> "base_to_body" [label="xyz: 0 0 0.525 \nrpy: 0 -0 0"]
+"base_to_body" -> "body"
+"body" -> "body_to_head" [label="xyz: 0 0 0.325 \nrpy: 0 -0 0"]
+"body_to_head" -> "head"
+"head" -> "head_to_camera" [label="xyz: 0.175 0 0.075 \nrpy: 1.5708 -0 0"]
+"head_to_camera" -> "camera"
+"camera" -> "camera_to_lens" [label="xyz: 0.03 0 0 \nrpy: -1.5708 0 0"]
+"camera_to_lens" -> "lens"
+"base_link" -> "base_to_fattach" [label="xyz: 0.225 0 0.1 \nrpy: 0 -0 0"]
+"base_to_fattach" -> "fwheel_attach"
+"fwheel_attach" -> "fwheel_attach_to_fwheel" [label="xyz: 0 0 -0.075 \nrpy: 0 -0 0"]
+"fwheel_attach_to_fwheel" -> "fwheel"
+"base_link" -> "base_to_lwheel" [label="xyz: 0 0.25 0.2 \nrpy: -1.5708 0 0"]
+"base_to_lwheel" -> "lwheel"
+"lwheel" -> "lwheel_to_lwheel_box" [label="xyz: 0 0 0.055 \nrpy: 1.5708 -0 0"]
+"lwheel_to_lwheel_box" -> "lwheel_box"
+"base_link" -> "base_to_rwheel" [label="xyz: 0 -0.25 0.2 \nrpy: -1.5708 0 0"]
+"base_to_rwheel" -> "rwheel"
+"rwheel" -> "rwheel_to_rwheel_box" [label="xyz: 0 0 -0.055 \nrpy: 1.5708 -0 0"]
+"rwheel_to_rwheel_box" -> "rwheel_box"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro '$(find differential_drive)/model/robot.urdf.xacro'" />
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find differential_drive)/simulation/rviz_sim.rviz"/>
+
+    <arg name="map_file" value="$(find differential_drive)/world/map/house_map.yaml"/>
+    <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
+
+    <include file="$(find differential_drive)/launch/navigation.launch" />
+    <include file="$(find differential_drive)/launch/move_base.launch" />
+
+</launch>
