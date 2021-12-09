@@ -16,7 +16,6 @@ from std_msgs.msg import Float64
 from cv_bridge import CvBridge, CvBridgeError
 # OpenCV2 for saving an image
 import cv2
-import rospkg
 
 def movebase_client(px,py,oz,w):
 
